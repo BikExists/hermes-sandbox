@@ -1,0 +1,121 @@
+:root {
+  --bg: #fdf6f0;
+  --display-bg: #ffffff;
+  --button-bg: #e8e6e3;
+  --button-operator: #ff6b6b;
+  --button-operator-hover: #ff5252;
+  --button-number-hover: #d0ceca;
+  --text: #2d3436;
+  --text-light: #636e72;
+  --accent: #118ab2;
+  --radius: 8px;
+  --transition: 0.2s ease;
+}
+
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+body {
+  font-family: system-ui, -apple-system, sans-serif;
+  background: var(--bg);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  min-height: 100vh;
+  padding: 20px;
+}
+
+.calculator {
+  width: 100%;
+  max-width: 360px;
+  background: #fff;
+  border-radius: 12px;
+  overflow: hidden;
+  box-shadow: 0 8px 32px rgba(0,0,0,0.08);
+}
+
+.display {
+  background: var(--display-bg);
+  padding: 20px;
+  text-align: right;
+  border-bottom: 1px solid #eee;
+}
+
+.previous-operand {
+  font-size: 0.8rem;
+  color: var(--text-light);
+  margin-bottom: 4px;
+  height: 1.2em;
+  overflow: hidden;
+}
+
+.current-operand {
+  font-size: 2rem;
+  color: var(--text);
+  min-height: 1.8em;
+  display: flex;
+  align-items: center;
+  justify-content: flex-end;
+}
+
+.buttons {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  gap: 8px;
+  padding: 8px;
+}
+
+button {
+  border: none;
+  border-radius: var(--radius);
+  background: var(--button-bg);
+  color: var(--text);
+  font-size: 1.2rem;
+  font-weight: 500;
+  cursor: pointer;
+  transition: var(--transition);
+  aspect-ratio: 1;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+button:hover:not(:disabled) {
+  background: var(--button-number-hover);
+}
+
+button:active:not(:disabled) {
+  background: #d5d3d0;
+  transform: scale(0.96);
+}
+
+button.operator {
+  background: var(--button-operator);
+  color: white;
+}
+
+button.operator:hover {
+  background: var(--button-operator-hover);
+}
+
+button.last {
+  grid-column: span 2;
+}
+
+.decimal {
+  background: #ffe676;
+}
+
+.decimal:hover {
+  background: #ffd65b;
+}
+
+/* Mobile-friendly: full width on small screens */
+@media (max-width: 360px) {
+  .buttons {
+    grid-template-columns: repeat(4, 1fr);
+  }
+}
