@@ -17,3 +17,17 @@
 - Created branch `hermes/fix-calculator` → fixed add bug → committed → pushed
 - Created branch `hermes-first-calculator` → built calculator UI → merged to `main`
 - Pushed 2 commits to `main` today (2026-09-08)
+
+---
+
+## Hermes Training Tests
+
+Five progressive challenges for training Hermes. Each has its own folder with a `README.md` brief and starter code.
+
+| Folder | Challenge | Difficulty |
+|--------|-----------|------------|
+| `test-01-bug-fix/` | Fix 2 bugs in `string_utils.py` | ⭐ Beginner |
+| `test-02-missing-feature/` | Implement 3 missing methods on `TodoList` | ⭐⭐ Easy |
+| `test-03-refactor/` | Refactor messy `stats.py` + write 5 pytest tests | ⭐⭐⭐ Medium |
+| `test-04-debug-and-extend/` | Fix 3 bugs in an API + add `/search` endpoint | ⭐⭐⭐⭐ Hard |
+| `test-05-full-feature/` | Build a markdown notes CLI from scratch | ⭐⭐⭐⭐⭐ Expert |
